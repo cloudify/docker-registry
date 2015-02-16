@@ -36,6 +36,9 @@ RUN patch \
  $(python -c 'import boto; import os; print os.path.dirname(boto.__file__)')/connection.py \
  < /docker-registry/contrib/boto_header_patch.diff
 
+# Install GCS driver
+RUN pip install docker-registry-driver-gcs
+
 ENV DOCKER_REGISTRY_CONFIG /docker-registry/config/config_sample.yml
 ENV SETTINGS_FLAVOR dev
 
