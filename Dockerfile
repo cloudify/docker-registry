@@ -37,7 +37,7 @@ RUN patch \
  < /docker-registry/contrib/boto_header_patch.diff
 
 # Install GCS driver
-RUN pip install docker-registry-driver-gcs
+RUN pip install https://github.com/GoogleCloudPlatform/docker-registry-driver-gcs/archive/master.zip
 
 ENV DOCKER_REGISTRY_CONFIG /docker-registry/config/config_sample.yml
 ENV SETTINGS_FLAVOR dev
