@@ -21,6 +21,7 @@ RUN apt-get update \
         libssl-dev \
         liblzma-dev \
         libevent1-dev \
+        libffi-dev \
     && rm -rf /var/lib/apt/lists/*
 
 COPY . /docker-registry
